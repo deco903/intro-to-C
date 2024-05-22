@@ -1,0 +1,35 @@
+//#include <iostream>
+//using namespace std;
+//int c;
+//int a=10;
+//int penjumlahan(int b){
+//    c = a + b;
+//    return c;
+//}
+//
+//int main(){ 
+//    int d = penjumlahan(5);
+//    cout<<"a = "<< a <<endl;
+//    cout<<"a + d = "<< d <<endl;
+//    return 0;
+//}
+
+
+#include <iostream>
+using namespace std;
+int a=4;
+int b=5;
+int c;
+
+int penjumlahan(){
+    int c = a + b;
+    return c;
+}
+
+int main(){
+    cout<<"Hasil penjumlahan 4 dan 5 adalah: "<<penjumlahan()<<endl;
+    cout<<"Nilai variabel a adalah: "<<a<<endl;
+    cout<<"Nilai variabel b adalah: "<<b<<endl;
+    cout<<"Nilai variabel c adalah: "<<c<<endl;
+    return 0;
+}

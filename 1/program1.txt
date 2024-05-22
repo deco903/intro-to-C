@@ -1,0 +1,34 @@
+//#include <stdio.h>
+//
+//
+//short angka=20;
+//int umur=25;
+//long totalBelanja=300000;
+//
+//int main(){
+//  printf("hello world!\n");
+//  printf("hello world!\n");
+//  printf("umur saya adalah : %d\n", umur);
+//  
+//  printf("angka: %d\n", angka);
+//  printf("umur: %d\n", umur);
+//  printf("total belanja: %d\n", totalBelanja);
+//  
+//  printf("dua buah variable yaitu: %d dan %d\n", angka,umur);
+//  
+//}
+
+
+#include <stdio.h>
+
+
+int main(){
+    printf("Hello, ini adalah teks output\n");
+    printf("Nama saya %s\n", "andre");
+    printf("Usia saya %d\n", 25);
+  
+}
+
+
+
+

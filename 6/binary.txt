@@ -1,0 +1,10 @@
+// binary_output_files.cpp
+// compile with: /EHsc
+#include <fstream>
+using namespace std;
+int iarray[2] = { 99, 10 };
+int main( )
+{
+    ofstream os( "test.dat" );
+    os.write( (char *) iarray, sizeof( iarray ) );
+}

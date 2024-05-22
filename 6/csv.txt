@@ -1,0 +1,22 @@
+#include <fstream>
+
+int main() {
+    // Create an output filestream object
+    std::ofstream myFile("foo.csv");
+
+    // Send data to the stream
+    myFile << "Foo\n";
+    myFile << "1\n";
+    myFile << "2\n";
+    myFile << "3\n";
+
+    myFile << "Foo";
+    myFile << "1";
+    myFile << "2";
+    myFile << "3";
+
+    // Close the file
+    myFile.close();
+
+
+}

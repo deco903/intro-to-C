@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main (){
+  FILE* BacaFile= fopen("Belajar.txt","r");
+
+  //sesuaikan tipe data dengan isi file yang ingin diread
+  char string[100]="";
+
+  //Jika ada isi pada file yang diakses maka akan diprint pada hasil run
+  //Jika tidak ada isi pada file maka hasil output akan kosong
+  while(!feof(BacaFile)){
+    fscanf(BacaFile,"%[^\n]\n",string);
+    puts(string);
+  }
+
+  return 0;
+}
+
+// Pada code diatas “r” berfungsi untuk membaca file.
+// Sesuaikan tipe data dengan isi file jika isi file angka maka gunakanlah float, int atau double.
+// Lakukan looping untuk memeriksa apakah ada isi filenya.
+// Baca isi file dengan fscanf.
+//  %[^\n] berfungsi untuk membaca string (kata) yang memiliki spasi.
+// puts(string) berfungsi untuk mencetak isi file.

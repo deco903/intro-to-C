@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(){
+        char grade;
+	printf("Masukkan grade anda (KAPITAL) [A/B/C/D] : "); 
+	scanf("%c", &grade); fflush(stdin);
+	//if artinya jika
+	//membandingkan grade apakah sama dengan A (hasil input)
+	//jika iya maka lakukan statement di dalamnya.
+	if(grade=='A'){
+		printf("Very Good! Nilai anda A");
+	}
+	//jika bukan A maka di cek lagi apakah inputan user == B
+	//jika iya maka lakukan statement di dalamnya.
+	else if(grade=='B'){
+		printf("Good! Nilai anda B");
+	}
+	//dan seterusnya..
+	else if(grade=='C'){
+		printf("Okay! Nilai anda C");
+	}
+	else if(grade=='D'){
+		printf("Bad! Nilai anda D");
+	}
+	//else artinya sisanya.. maksudnya jika grade bukan A bukan B bukan C ataupun bukan D maka masuk dalam else
+	else{
+		printf("Kami tidak mengenali grade anda");
+	}
+	getchar();
+        return 0;
+}

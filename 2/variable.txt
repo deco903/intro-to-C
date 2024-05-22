@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+
+int main(){ //tanda {} adalah sebuah fungsi dan di dalam fungsi ada sebuah blok code yang akan di eksekusi
+    // membuat variabel dengan tipe data integer
+    int berat =54;
+    // membuat variabel dan langsung mengisinya
+    int tinggi = 178;
+
+    // mencetak isi variabel ke layar
+    printf("Berat badan saya adalah %icm dan tinggi %ikg", tinggi, berat);
+    
+}
+
+

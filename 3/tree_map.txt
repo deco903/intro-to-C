@@ -1,0 +1,69 @@
+#include <iostream>
+#include <map>
+#include <unordered_map>
+using namespace std;
+ 
+map<string, int> m;
+unordered_map<string, int> u;
+ 
+int main() {
+	std::cout << "=====================Section A======================" << endl;
+	std::cout << "====================================================" << endl;
+ 
+	int age[5] = {17, 15, 18};
+ 
+	std::cout << "Before insert:" << endl;
+	std::cout << "Standard  Map M size:" << m.size() << endl;
+	std::cout << "Unordered Map M size:" << u.size() << endl;
+ 
+	// insert
+	m["candi"] = age[0];
+	m["budi"] = age[1];
+	u["candi"] = age[0];
+	u["budi"] = age[1];
+ 
+	std::cout << "After insert:" << endl;
+	std::cout << "Standard  Map M size:" << m.size() << endl;
+	std::cout << "Unordered Map M size:" << u.size() << endl;
+ 
+	std::cout << "=====================Section B======================" << endl;
+	std::cout << "====================================================" << endl;
+ 
+	// search
+	std::cout << "'candi' value from m: " << m["candi"] << endl;
+	std::cout << "'candi' value from u: "<< u["candi"] << endl;
+ 
+	std::cout << "=====================Section C======================" << endl;
+	std::cout << "====================================================" << endl;
+ 
+	// check before insert
+	if(!m["adi"]){
+		m["adi"] = age[2];
+	}
+	if(!u["adi"]){
+		u["adi"] = age[2];
+	}
+	if(!m["candi"]){
+		m["candi"] = -100;
+	}
+	std::cout << "Standard  Map M size:" << m.size() << endl;
+	std::cout << "Unordered Map M size:" << u.size() << endl;
+ 
+	std::cout << "=====================Section D======================" << endl;
+	std::cout << "====================================================" << endl;
+ 
+	map<string, int>::iterator im;
+	unordered_map<string, int>::iterator iu;
+ 
+	std::cout << "Iterate over m" << endl;
+	for(im=m.begin();im!=m.end();im++){
+		cout << "key: " << im->first << ",  value: " << im->second << endl;
+	}
+ 
+	std::cout << "Iterate over u" << endl;
+	for(iu=u.begin();iu!=u.end();iu++){
+		cout << "key: " << iu->first << ",  value: " << iu->second << endl;
+	}
+ 
+	return 0;
+}

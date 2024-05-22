@@ -1,0 +1,57 @@
+
+// program illustrasi mulai dan akhir dari iterator pointing
+//#include <iostream>
+//#include <map>
+//#include <string>
+//using namespace std;
+// 
+//int main()
+//{
+//    // membuat peta dari string ke integer
+//    map<string, int> mp;
+// 
+//    // input sebuah nilai ke peta
+//    mp["satu"] = 1;
+//    mp["dua"] = 2;
+//    mp["tiga"] = 3;
+//  
+//    
+// 
+//    // mendapatkan sebuah iterator pointing ke element pertama di dalam peta
+//    map<string, int>::iterator it = mp.begin();
+// 
+//    // iterator melewati peta dan mencetak element
+//    while (it != mp.end()) {
+//        cout << "Key: " << it->first
+//             << ", Nilai: " << it->second << endl;
+//        ++it;
+//    }
+// 
+//    return 0;
+//}
+
+
+// C++ program to illustrate the size() function
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+ 
+int main()
+{
+   
+    // membuat string peta ke integer
+    map<string, int> map;
+ 
+   
+    // memasukan sebuah nilai ke dalam peta
+    map["satu"] = 1;
+    map["dua"] = 2;
+    map["tiga"] = 3;
+ 
+  
+    // cetak ukuran dari peta
+    cout << "ukuran peta: " << map.size() << endl;
+ 
+    return 0;
+}

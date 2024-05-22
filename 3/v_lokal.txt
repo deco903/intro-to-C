@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+
+int penambahan(int a, int b){
+    int c = a + b;
+    return c;
+}
+
+int main(){
+    //cout<<enjumlahan(4,5)<<endl;
+    printf("penjumlahan %d", 5 + 5);
+}
+
+
+
+
+

@@ -1,0 +1,79 @@
+//case 1
+//#include <iostream>
+//using namespace std;
+//
+//int penjumlahan(int a, int b){
+//    int c = a + b;
+//    return c;
+//}
+//
+//
+//int main(){
+//    cout<<penjumlahan(4,5)<<endl;
+//    return 0;
+//}
+
+
+// case2
+// CPP program to illustrate  
+// usage of local variables  
+//#include<iostream> 
+//using namespace std; 
+//  
+//void func() 
+//{    
+//    int age=18;  
+//    cout<<age; 
+//} 
+//  
+//int main() 
+//{ 
+//    cout<<"usia saya adalah: "; func(); 
+//    return 0; 
+//} 
+
+//case 3 
+//#include <iostream>
+//using namespace std;
+//
+//void pagi() {
+//string morning;
+//morning = "selamat pagi";
+//cout << morning << endl;
+//}
+//
+//void malam() {
+//string evening = "selamat malam";
+//cout << evening<< endl;
+//}
+//
+//void siang() {
+//string afternoon = "selamat siang";
+//cout << afternoon;
+//}
+//
+//int main() {
+//pagi();
+//malam();
+//siang();
+//return 0;
+//}
+
+//case 4 
+//#include <iostream>
+//using namespace std;
+//
+//int average(int totalmarks, int students) {
+//return totalmarks / students;
+//}
+//
+//int main() {
+//int s = 400, ss = 50;
+//int avg;
+//avg = average(s, ss);
+//cout << "Rata-rata nilai perkelas adalah : "<< avg << endl;
+//return 0;
+//}
+
+
+

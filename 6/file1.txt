@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(){
+
+  FILE *tulisData = fopen("Belajar.txt","w");
+
+  //ngeprint data ke notepad
+  fprintf(tulisData,"Nama   : %s\n","Andi");
+  fprintf(tulisData,"Umur   : %d\n", 25);
+  fprintf(tulisData,"Alamat : %s\n","Taman galaxi bekasi selatan");
+
+  fclose(tulisData); //tutup file
+   return 0;
+}
+
+// Dalam file processing dibutuhkan FILE *variabel.
+// fopen pada code diatas merupakan function pada file processing.
+// Belajar.txt merupakan nama file yang ingin kita buat.
+// W merupakan operasi file processing yang berfungsi untuk write file.
+// fclose menutup file.

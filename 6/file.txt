@@ -1,0 +1,99 @@
+#include<iostream>
+#include<fstream> // ini modul untuk membuat file text
+
+
+int main(){
+	// membuat file untuk bisa di baca saja  mode r (read)
+	// wajib sudah ada nama file yang di sebutkan
+	std::ifstream readFileA ("readFile.txt",std::ifstream::in);
+	// check apakah sudah ada filenya kalau belum tolong di buatkan
+	if(readFileA.is_open()){
+		std::cout << "File berhasil di buat readFile.txt" << std::endl;
+		std::cout << "isi dari file yang bernama readFile.txt adalah" << std::endl;
+		std::string line;
+		// std::getLine gunanya untuk mengambil kata per line / raw  yang ada pada text
+		while (std::getline(readFileA,line)){
+			std::cout << line << std::endl;
+		}
+
+		readFileA.close(); // untuk menutup file jika tidak di gunkan lagi
+	}else{
+		// pesan ini akan muncul jika namafile belum ada atau belum di buat
+		std::cout << "File gagal di buat dengan nama readFile.txt" << std::endl;
+	}
+
+	std::cout << std::endl;
+
+	// menmbuat dan mengisi file jika file tersebut belum ada  mode w (Write)
+	std::ofstream writeFile("writeFile.txt",std::ofstream::out);
+	if(writeFile.is_open()){
+		std::cout << "File di writeFile.txt di temukan " << std::endl;
+		std::cout << std::endl;
+
+		// cara mengisi ke dalam file yang udah di buat per line
+		writeFile << "saya ingin makan sate dengan tenang \n" ;
+
+		writeFile.close();
+	}else{
+		std::cout << "File tidak di temukan " << std::endl;
+	}
+	std::cout << std::endl;
+
+	// menambhakan tulisan ke dalam file yang sudah ada mode a (append)
+	// jika file sudah ada maka akan di hapus kembali
+	std::ofstream appendFile ("appendFile.txt",std::ios::app);
+	if(appendFile.is_open()){
+		std::cout << "File appendFile.txt dapat di temukan" << std::endl;
+		appendFile << "Saya menambahkan text ini pada File appendFile.txt \n" ;
+		appendFile.close();
+	}else{
+		std::cout << "File tidak di temukan " << std::endl;
+	}
+	std::cout << std::endl;
+
+	// Membaut dan membaca file yang sudah ada
+	// file wajib sudah ada
+	std::fstream readAndWrite ("readAndWrite.txt",std::ios::in | std::ios::out);
+	if(readAndWrite.is_open()){
+		std::cout << "File berhasil di buat dengan nama readAndWrite.txt" << std::endl;
+		readAndWrite << "ReadAndWrite di gunakan untuk file yang bisa di baca dan di sisikan secara langsung \n";
+
+		std::string pesanRow;
+
+		while (std::getline(readAndWrite,pesanRow)){
+			std::cout << pesanRow << std::endl;
+		}
+		readAndWrite.close();
+	}else{
+		std::cout << "File tidak di temukan readAndWrite.txt" << std::endl;
+	}
+	std::cout << std::endl;
+	// membuat dan membaca isi file Mode a+ (append/read)
+
+	std::fstream appendAndread ( "appendAndread.txt",std::ios::app | std::ios::in);
+	if(appendAndread.is_open()){
+		std::cout << "File berhasil di buat dengan nama appendAndread.txt" << std::endl;
+		appendAndread << "appendAndread \n";
+
+		std::string pesanPerRow;
+
+		while(std::getline(appendAndread,pesanPerRow)){
+			std::cout << pesanPerRow << std::endl;
+		}
+
+		appendAndread.close();
+	}else{
+		std::cerr << "Gagal membuat file dalam mode append/read (a+)" << std::endl;
+	}
+std::cout << std::endl;
+	// mode W+ write/read
+
+	std::fstream writeandread("writeAndRead.txt" , std::ios::out | std::ios::in | std::ios::trunc);
+	if(writeandread.is_open()){
+		 std::cout << "File berhasil dibuka dalam mode write/read (w+)" << std::endl;
+		 writeandread.close();
+	}else {
+        std::cerr << "Gagal membuka file dalam mode write/read (w+)" << std::endl;
+    }
+	return 0;
+}
